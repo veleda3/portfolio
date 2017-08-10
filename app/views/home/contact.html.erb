@@ -1,0 +1,111 @@
+<div id="page-content-wrapper" class="header">
+    <div class="container-fluid">
+        <a href="#menu-toggle" id="menu-toggle"><i class="lnr lnr-menu"></i></a>
+
+        <!-- map -->
+        <div id="map" class="big"></div>
+        <!-- / map -->
+
+        <!-- contact info 2col -->
+        <div class="contact-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="../images/logo2.png" alt="">
+                        <p>Sed euismod risus nunc, eget condimentum dui commodo ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis iaculis tincidunt ligula, vitae tempus nisl feugiat nec. Nunc semper commodo ex. Donec nec auctor mauris.</p>
+                        <p>
+                        Suspendisse porta tincidunt neque, vel rutrum dolor consectetur at. Etiam dignissim, lacus sit amet fermentum elementum, eros est venenatis lacus, pretium eleifend leo libero.</p>
+                    </div>
+                    <div class="col-sm-6 contacts">
+                        <div class="info">
+                        <p class="contact-info-title"><i class="lnr lnr-map-marker"></i>Address</p>
+                        <span class="contact-info-text">Miami, S Miami Ave, SW 20th.</span>
+                        </div>
+                        <div class="info">
+                        <p class="contact-info-title"><i class="lnr lnr-phone-handset"></i>Phone</p>
+                        <a href="tel:+0123456789"  class="contact-info-text">+0123 456 789</a>
+                        </div>
+                        <div class="info last">
+                        <p class="contact-info-title"><i class="lnr lnr-envelope"></i>Email</p>
+                        <a href="mailto:hello@phorto.com"  class="contact-info-text">hello@phorto.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- / container -->
+        </div><!-- / contact info 2col -->
+
+        <!-- contact -->
+        <div id="contact" class="full-width" data-section="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="contactForm" data-toggle="validator">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="FULL NAME" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="EMAIL" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" placeholder="SUBJECT">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <textarea id="message" class="form-control" rows="5" placeholder="MESSAGE" required></textarea>
+                                    <div class="help-block with-errors"></div>
+                                    </div>
+                                    <button type="submit" id="form-submit" class="btn btn-primary btn-md btn-form-submit">Submit</button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- / container -->
+        </div><!-- / contact -->
+
+    </div>
+</div><!-- / page-content-wrapper -->
+<script>
+  function initMap() {
+    var location = {lat: 42.640999, lng: -71.316711};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: location
+    });
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+
+    });
+
+    var contentString = '<div class="info-window">' +
+            '<h3>Info Window Content</h3>' +
+            '<div class="info-content">' +
+            '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
+            '</div>' +
+            '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 400
+    });
+    marker.addListener('click', function () {
+        infowindow.open(map, marker);
+    });
+
+    var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
+
+    map.set('styles', styles);
+
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU1cqueUXNgFXDlCfJJPnskxlIimkR49M&callback=initMap">
+</script>
