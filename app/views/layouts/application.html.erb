@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio</title>
+    <title>Velezda</title>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <%= javascript_include_tag 'application', 'bootstrap.min', 'owl.carousel.min', 'scrolling-nav', 'jquery.easing.min', 'jquery.shuffle.min', 'custom', 'jquery.countTo', 'map', 'validator.min', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', 'animate', 'font-awesome.min', 'home', 'linear-icons', 'owl.carousel', 'owl.theme', 'style', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,600,700' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
+<div id="wrapper">
+     <%= render partial: 'partials/navbar' %>
     <%= yield %>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+</script>
+
+<script type="text/javascript">
+     $('.timer').countTo({
+       refreshInterval: 60,
+       formatter: function (value, options) {
+         return value.toFixed(options.decimals);
+       },
+     });
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA40uewXP25u1A4o9u8ueBimZZwIdNLkY"></script>
+
   </body>
 </html>
