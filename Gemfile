@@ -34,6 +34,7 @@ gem 'dotenv'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'tether-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
