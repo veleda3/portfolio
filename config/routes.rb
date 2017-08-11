@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :jobs, only: [:index, :show, :new, :create, :destroy]
+
   get 'home/index'
 
   get 'home/about'

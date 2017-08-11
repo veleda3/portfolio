@@ -1,0 +1,53 @@
+<div id="page-content-wrapper" class="header">
+    <div class="container-fluid">
+        <!-- header -->
+        <a href="#menu-toggle" id="menu-toggle"><i class="lnr lnr-menu"></i></a>
+        <div class="portfolio-header">
+            <div class="header-content">
+                <h3 class="animated fadeInDown">PORTFOLIO</h3>
+                <div class="separator-line animated fadeInUp"> </div>
+            </div>
+        </div>
+        <!-- / header -->
+
+        <!-- work 3col full -->
+        <div id="work" class="full-width" data-section="work">
+            <div class="container">
+                <!-- portfolio filter -->
+                <ul class="portfolio-filter list-inline text-center">
+                    <li><a href="#" data-group="all" class="active">All</a></li>
+                    <li><a href="#" data-group="branding">Branding</a></li>
+                    <li><a href="#" data-group="creative">Creative</a></li>
+                    <li><a href="#" data-group="photography">Photography</a></li>
+                    <li><a href="#" data-group="web-design">Web Design</a></li>
+                    <li><a href="#" data-group="design">Design</a></li>
+                </ul> <!--end portfolio filter -->
+                <!-- projects -->
+                <ul class="row portfolio-items list-unstyled" id="grid">
+
+                  <% @jobs.each do |job| %>
+                    <li class="col-xs-6 col-md-4" data-groups='["branding"]'>
+                        <figure class="portfolio-item">
+                            <div class="hovereffect">
+
+                              <%=image_tag(job.picture, class: "img-responsive")%>
+                                <a href="jobs/<%=job.id%>">
+                                    <div class="overlay">
+                                        <div class="hovereffect-title">
+                                            <h2>Project <%= job.id %></h2>
+                                        </div>
+                                    </div>
+                                </a>
+                                </div>
+                        </figure>
+                    </li>
+                    <% end %>
+
+                <!-- sizer -->
+                <li class="col-xs-6 col-md-4 shuffle_sizer"></li>
+                </ul> <!-- / projects -->
+            </div><!-- / container -->
+        </div><!-- / work 3col full -->
+
+    </div>
+</div>
