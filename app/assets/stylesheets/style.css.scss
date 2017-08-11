@@ -593,6 +593,11 @@ cite {
 }
 
 .feature-icon {
+  background: url("cookies.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #40bfff;
   padding: 23px;
   margin-bottom: 30px;
@@ -680,6 +685,9 @@ cite {
   color: white;
 }
 
+.company-info li {
+  color: white;
+}
 .progress {
   height: 16px !important;
   background-color: #eee !important;
@@ -729,6 +737,11 @@ cite {
 }
 
 #about-freelancer .company-info p {
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+#about-freelancer .company-info li {
   color: #555555;
   margin-bottom: 20px;
 }
