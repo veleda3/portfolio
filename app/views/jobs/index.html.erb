@@ -24,216 +24,25 @@
                 </ul> <!--end portfolio filter -->
                 <!-- projects -->
                 <ul class="row portfolio-items list-unstyled" id="grid">
+
+                  <% @jobs.each do |job| %>
                     <li class="col-xs-6 col-md-4" data-groups='["branding"]'>
                         <figure class="portfolio-item">
                             <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-1.jpg" alt="">
-                                <a href="single-image-project.html">
+
+                              <%=image_tag(job.picture, class: "img-responsive")%>
+                                <a href="jobs/<%=job.id%>">
                                     <div class="overlay">
                                         <div class="hovereffect-title">
-                                            <h2>Project 1</h2>
+                                            <h2>Project <%= job.id %></h2>
                                         </div>
                                     </div>
                                 </a>
                                 </div>
                         </figure>
                     </li>
-                    <li class="col-xs-6 col-md-4" data-groups='["web-design"]'>
-                        <figure class="portfolio-item">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-2.jpg" alt="">
-                                <a href="single-image-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 2</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                        </figure>
-                    </li>
-                    <li class="col-xs-6 col-md-4" data-groups='["design"]'>
-                        <figure class="portfolio-item">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-3.jpg" alt="">
-                                <a href="single-image-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 3</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                         </figure>
-                    </li>
-                    <li class="col-xs-6 col-md-4" data-groups='["photography"]'>
-                        <figure class="portfolio-item">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-3.jpg" alt="">
-                                <a href="single-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 4</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                        </figure>
-                    </li>
-                    <li class="col-xs-6 col-md-4" data-groups='["creative", "photography"]'>
-                        <figure class="portfolio-item">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-4.jpg" alt="">
-                                <a href="single-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 5</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                        </figure>
-                     </li>
-                     <li class="col-xs-6 col-md-4" data-groups='["creative", "branding"]'>
-                         <figure class="portfolio-item">
-                             <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-1.jpg" alt="">
-                                <a href="single-image-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 6</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                            </figure>
-                     </li>
-                     <li class="col-xs-6 col-md-4" data-groups='["design"]'>
-                        <figure class="portfolio-item">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-1.jpg" alt="">
-                                <a href="single-image-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 7</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                        </figure>
-                     </li>
-                     <li class="col-xs-6 col-md-4" data-groups='["creative"]'>
-                        <figure class="portfolio-item">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-2.jpg" alt="">
-                                <a href="single-image-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 8</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                        </figure>
-                     </li>
-                     <li class="col-xs-6 col-md-4" data-groups='["web-design"]'>
-                         <figure class="portfolio-item">
-                             <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-3.jpg" alt="">
-                                <a href="single-image-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 9</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                          </figure>
-                     </li>
-                     <li class="col-xs-6 col-md-4" data-groups='["creative", "web-design"]'>
-                         <figure class="portfolio-item">
-                             <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-3.jpg" alt="">
-                                <a href="single-image-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 10</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                          </figure>
-                     </li>
-                     <li class="col-xs-6 col-md-4" data-groups='["design", "branding"]'>
-                         <figure class="portfolio-item">
-                             <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-4.jpg" alt="">
-                                <a href="single-image-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 11</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                          </figure>
-                     </li>
-                     <li class="col-xs-6 col-md-4" data-groups='["photography"]'>
-                         <figure class="portfolio-item">
-                             <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-1.jpg" alt="">
-                                <a href="single-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 12</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                          </figure>
-                     </li>
-                     <li class="col-xs-6 col-md-4" data-groups='["photography"]'>
-                         <figure class="portfolio-item">
-                             <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-1.jpg" alt="">
-                                <a href="single-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 13</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                          </figure>
-                     </li>
-                     <li class="col-xs-6 col-md-4" data-groups='["web-design"]'>
-                         <figure class="portfolio-item">
-                             <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-2.jpg" alt="">
-                                <a href="single-image-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 14</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                          </figure>
-                     </li>
-                     <li class="col-xs-6 col-md-4" data-groups='["branding", "creative", "design"]'>
-                         <figure class="portfolio-item">
-                             <div class="hovereffect">
-                                <img class="img-responsive" src="../images/project-3.jpg" alt="">
-                                <a href="single-image-project.html">
-                                    <div class="overlay">
-                                        <div class="hovereffect-title">
-                                            <h2>Project 15</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                          </figure>
-                     </li>
+                    <% end %>
+
                 <!-- sizer -->
                 <li class="col-xs-6 col-md-4 shuffle_sizer"></li>
                 </ul> <!-- / projects -->

@@ -9,6 +9,7 @@ class JobsController < ApplicationController
 
   def create
     job = Job.new(job_params)
+
     if job.save
       redirect_to jobs_path, :flash => { notice: "Thank you for adding a job" }
     else
@@ -21,11 +22,12 @@ class JobsController < ApplicationController
   end
 
   def show
+    @job = Job.find(params[:id])
   end
 
   private
 
   def job_params
-  params.permit(:about, :client, :website, :finished_on)
+  params.require(:job).permit(:about, :client, :website, :finished_on, :picture)
 end
 end

@@ -1,2 +1,119 @@
-<h1>Jobs#show</h1>
-<p>Find me in app/views/jobs/show.html.erb</p>
+<div id="page-content-wrapper" class="header">
+    <div class="container-fluid">
+        <a href="#menu-toggle" id="menu-toggle"><i class="lnr lnr-menu"></i></a>
+
+        <!-- single-project -->
+        <div id="single-project">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="single-post-content">
+                            <div class="page-header">
+                                <h2>Single Project</h2>
+                            </div>
+                            <%=image_tag(@job.picture, class: "img-responsive")%>
+                            <!-- single post content -->
+                            <div class="post-content">
+                                <div class="row">
+                                    <div class="col-md-6 about-project">
+                                        <h3 class="project-title">About Project</h3>
+                                        <%= @job.about %>
+                                    </div>
+                                    <div class="col-md-6 project-info">
+                                        <h3 class="project-title">Project Info</h3>
+                                        <p class="info-text"><i class="lnr lnr-clock"></i><span> Finished On:</span><%=@job.finished_on%></p>
+                                        <p class="info-text"><i class="lnr lnr-user"></i> <span> Client:</span><%=@job.client%></p>
+                                        <p class="info-text"><i class="lnr lnr-earth"></i> <span> Website:</span> <%=@job.website%></p>
+                                        <p class="info-text"><i class="lnr lnr-chart-bars"></i><span> Skills:</span></p>
+                                        <h6>Web Development</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success animated fadeInLeft" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                                            <span class="sr-only">95%</span>
+                                            </div>
+                                        </div>
+                                        <h6>Web Design</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary second animated fadeInLeft" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                                                <span class="sr-only">75%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- / single post content -->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- / container -->
+        </div><!-- / single-project -->
+
+        <!-- work 4col full -->
+        <div id="work" class="full-width" data-section="work">
+            <div class="page-header stacked">
+                <h2>Related Projects</h2>
+            </div>
+            <div class="container">
+                <!-- projects -->
+                <ul class="row portfolio-items list-unstyled" id="grid">
+                    <li class="col-xs-6 col-md-3" data-groups='["branding"]'>
+                        <figure class="portfolio-item">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="../images/project-1.jpg" alt="">
+                                <a href="single-image-project.html">
+                                    <div class="overlay">
+                                        <div class="hovereffect-title">
+                                            <h2>Project 1</h2>
+                                        </div>
+                                    </div>
+                                </a>
+                                </div>
+                        </figure>
+                    </li>
+                    <li class="col-xs-6 col-md-3" data-groups='["branding"]'>
+                        <figure class="portfolio-item">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="../images/project-2.jpg" alt="">
+                                <a href="single-image-project.html">
+                                    <div class="overlay">
+                                        <div class="hovereffect-title">
+                                            <h2>Project 2</h2>
+                                        </div>
+                                    </div>
+                                </a>
+                                </div>
+                        </figure>
+                    </li>
+                    <li class="col-xs-6 col-md-3" data-groups='["photography"]'>
+                        <figure class="portfolio-item">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="../images/project-3.jpg" alt="">
+                                <a href="single-project.html">
+                                    <div class="overlay">
+                                        <div class="hovereffect-title">
+                                            <h2>Project 3</h2>
+                                        </div>
+                                    </div>
+                                </a>
+                                </div>
+                         </figure>
+                    </li>
+                    <li class="col-xs-6 col-md-3" data-groups='["photography"]'>
+                        <figure class="portfolio-item">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="../images/project-4.jpg" alt="">
+                                <a href="single-project.html">
+                                    <div class="overlay">
+                                        <div class="hovereffect-title">
+                                            <h2>Project 4</h2>
+                                        </div>
+                                    </div>
+                                </a>
+                                </div>
+                        </figure>
+                <!-- sizer -->
+                <li class="col-xs-6 col-md-3 shuffle_sizer"></li>
+                </ul> <!-- / projects -->
+            </div><!-- / container -->
+        </div><!-- / work 4col full -->
+
+    </div>
+</div>
