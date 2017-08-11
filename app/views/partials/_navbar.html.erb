@@ -3,20 +3,20 @@
         <li class="sidebar-brand">
             <a href="#"><img src="images/logo.png" alt=""></a>
         </li>
-        <li class="active">
+        <li class="<%=yield(:home_active)%>">
             <a class="menu-item" href="/">Home</a>
         </li>
-        <li>
-            <%= link_to "Services", home_services_path,  class:'menu-item' %>
+        <li class="<%=yield(:service_active)%>">
+            <%= link_to "Services", home_services_path,  class:"menu-item" %>
         </li>
-        <li>
-          <%= link_to "Jobs", jobs_path,  class:'menu-item' %>
+        <li class="<%=yield(:jobs_active)%>">
+          <%= link_to "Jobs", jobs_path,  class:"menu-item" %>
         </li>
-        <li>
-            <a class="menu-item" href="pages/blog.html">Blog</a>
+        <li class="<%=yield(:blog_active)%>">
+            <%= link_to "Blog", posts_path,  class:"menu-item" %>
         </li>
-        <li>
-            <%= link_to "Contact", home_contact_path,  class:'menu-item' %>
+        <li class="<%=yield(:contact_active)%>">
+            <%= link_to "Contact", home_contact_path,  class:"menu-item" %>
         </li>
         <li class="menu-footer">
             <span>

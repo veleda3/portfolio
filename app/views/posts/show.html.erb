@@ -1,0 +1,50 @@
+<div id="image-post">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="single-post-content">
+                            <div class="page-header">
+                              <p id="notice"><%= notice %></p>
+                                <h2><%= @post.title %></h2>
+                                <p class="post-meta">Posted By <a href="/" class="post-meta-link">Daniel Velez</a> on <a href="/" class="post-meta-link"><%=@post.published_date%></a></p>
+                            </div>
+                            <%= image_tag(@post.banner_image_url) %>
+                            <!-- single post content -->
+                            <div class="post-content">
+                                <p class="first-post-paragraph">
+                                  <%= @post.body %>
+                                </p>
+
+                                <div class="social-share">
+                                    <a href="#"><i class="fa fa-facebook"></i>Like</a>
+                                    <a href="#"><i class="fa fa-twitter"></i>Tweet</a>
+                                    <a href="#"><i class="fa fa-google-plus"></i>Plus1</a>
+                                    <a href="#"><i class="fa fa-pinterest"></i>Pin it</a>
+                                    <a href="#"><i class="fa fa-dribbble"></i>Dribbble</a>
+                                </div>
+                            </div><!-- / single post content -->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- / container -->
+        </div><!-- / image-post -->
+
+        <!-- post-nav -->
+        <div class="post-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="single-video-post.html" class="btn btn-primary btn-md left"><i class="lnr lnr-chevron-left"></i>Next Post</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="single-video-post.html" class="btn btn-primary btn-md right">Previous Post<i class="lnr lnr-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div><!-- / container -->
+        </div><!-- / post-nav -->
+
+    </div>
+</div>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
