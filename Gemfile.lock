@@ -200,11 +200,7 @@ DEPENDENCIES
   devise
   dotenv
   font-awesome-sass
-<<<<<<< HEAD
-  friendly_id
-=======
   friendly_id (~> 5.1.0)
->>>>>>> d2b2cd5bdd62670eff779c822b92a5dad8371e0e
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
