@@ -41,6 +41,7 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (7.1.2.3)
       execjs
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -53,6 +54,12 @@ GEM
     byebug (9.0.6)
     coderay (1.1.1)
     concurrent-ruby (1.0.5)
+    devise (4.3.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.2)
+      responders
+      warden (~> 1.2.3)
     dotenv (2.2.1)
     erubi (1.6.1)
     erubis (2.7.0)
@@ -92,6 +99,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
+    orm_adapter (0.5.0)
     pg (0.21.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -131,6 +139,9 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     ruby_dep (1.5.0)
     sass (3.5.1)
       sass-listen (~> 4.0.0)
@@ -168,6 +179,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -184,9 +197,14 @@ DEPENDENCIES
   better_errors
   bootstrap-sass
   byebug
+  devise
   dotenv
   font-awesome-sass
+<<<<<<< HEAD
   friendly_id
+=======
+  friendly_id (~> 5.1.0)
+>>>>>>> d2b2cd5bdd62670eff779c822b92a5dad8371e0e
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
