@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :posts
   resources :jobs, only: [:index, :show, :new, :create, :destroy]
 
   get 'home/index'
