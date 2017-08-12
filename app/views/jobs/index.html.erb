@@ -20,7 +20,7 @@
                 </ul> <!--end portfolio filter -->
                 <!-- projects -->
                 <ul class="row portfolio-items list-unstyled" id="grid">
-
+                  <% if @jobs.any? %>
                   <% @jobs.each do |job| %>
                     <li class="col-xs-6 col-md-4" data-groups='["branding"]'>
                         <figure class="portfolio-item">
@@ -38,6 +38,7 @@
                         </figure>
                     </li>
                     <% end %>
+                    <%end%>
 
                 <!-- sizer -->
                 <li class="col-xs-6 col-md-4 shuffle_sizer"></li>

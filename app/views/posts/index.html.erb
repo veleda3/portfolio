@@ -15,6 +15,7 @@
         <div id="blog" data-section="blog">
             <div class="container">
                 <div class="row">
+                  <% if @posts.any? %>
                   <% @posts.each do |post| %>
                     <div class="blog-post-small col-sm-12 col-md-4">
                         <div class="blog-header">
@@ -26,7 +27,8 @@
                         <%= link_to 'Read more', post, class:"btn btn-xs btn-primary read-more"%>
 
                     </div>
-                    <% end %>
+                    <%end%>
+                    <%end%>
                 </div>
             </div><!-- / container -->
         </div><!-- / blog 3col grid-->
