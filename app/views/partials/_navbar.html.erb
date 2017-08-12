@@ -1,5 +1,14 @@
 <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
+      <% if author_signed_in? %>
+        <li class="">
+          <spam><%=current_author.name%></spam>
+      </li>
+        <li class="">
+          <%= link_to "Logout", destroy_author_session_path(current_author), method: :delete %>
+      </li>
+      <% end %>
+
         <li class="sidebar-brand">
             <a href="#"><img src="images/logo.png" alt=""></a>
         </li>

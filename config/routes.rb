@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
 
-  resources :posts
-  resources :jobs, only: [:index, :show, :new, :create, :destroy]
+  devise_for :authors
+
+  authenticate :author do
+    resources :posts, only: [:new, :create, :edit, :update, :destroy]
+  end
+
+  authenticate :author do
+    resources :jobs, only: [:new, :create, :edit, :update, :destroy]
+  end
+  resources :posts, only: [:show, :index]
+  resources :jobs, only: [:index, :show,]
 
   get 'home/index'
 
