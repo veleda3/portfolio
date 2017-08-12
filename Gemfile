@@ -37,6 +37,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'tether-rails'
 gem 'devise'
+gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
