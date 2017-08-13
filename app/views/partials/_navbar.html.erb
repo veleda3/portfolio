@@ -9,6 +9,11 @@
         </li>
         <li>
           <%= link_to "Logout", destroy_author_session_path(current_author), method: :delete %>
+      </li>
+      <% end %>
+
+        <li class="sidebar-brand">
+
         </li>
         <% end %>
         <li class="<%=yield(:home_active)%>">
