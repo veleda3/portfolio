@@ -1,7 +1,7 @@
 <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <li class="sidebar-brand">
-
+            <a href="/"><%= image_tag("logo.jpg", :alt => "logo") %></a>
         </li>
         <% if author_signed_in? %>
         <li>
@@ -9,7 +9,7 @@
         </li>
         <li>
           <%= link_to "Logout", destroy_author_session_path(current_author), method: :delete %>
-        </li>
+      </li>
       <% end %>
         <li class="<%=yield(:home_active)%>">
             <a class="menu-item" href="/">Home</a>
