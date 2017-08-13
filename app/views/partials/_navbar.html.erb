@@ -1,17 +1,16 @@
 <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
-      <% if author_signed_in? %>
-        <li class="">
-          <spam><%=current_author.name%></spam>
-      </li>
-        <li class="">
-          <%= link_to "Logout", destroy_author_session_path(current_author), method: :delete %>
-      </li>
-      <% end %>
-
         <li class="sidebar-brand">
-            <a href="#"><%= image_tag("logo.jpg", :alt => "logo") %></a>
+            <a href="/"><%= image_tag("logo.jpg", :alt => "logo") %></a>
         </li>
+        <% if author_signed_in? %>
+        <li>
+          <spam><%=current_author.name%></spam>
+        </li>
+        <li>
+          <%= link_to "Logout", destroy_author_session_path(current_author), method: :delete %>
+        </li>
+        <% end %>
         <li class="<%=yield(:home_active)%>">
             <a class="menu-item" href="/">Home</a>
         </li>
