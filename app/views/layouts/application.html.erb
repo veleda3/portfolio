@@ -3,13 +3,15 @@
   <head>
     <title>Velezda</title>
     <%= csrf_meta_tags %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
     <%= javascript_include_tag 'application', 'bootstrap.min', 'owl.carousel.min', 'scrolling-nav', 'jquery.easing.min', 'jquery.shuffle.min', 'custom', 'jquery.countTo', 'validator.min', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'application', 'animate', 'font-awesome.min', 'home', 'linear-icons', 'owl.carousel', 'owl.theme', 'style', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,600,700' rel='stylesheet' type='text/css'>
+
+    <%= yield(:head) %>
   </head>
 
   <body>
