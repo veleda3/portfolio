@@ -31,6 +31,7 @@ gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv'
+gem 'redcarpet', '~> 3.0.0'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

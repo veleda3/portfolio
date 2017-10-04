@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   authenticate :author do
     resources :jobs, only: [:new, :create, :edit, :update, :destroy]
   end
+
+
   resources :posts, only: [:show, :index]
+
+
   resources :jobs, only: [:index, :show,]
 
   get 'home/index'
