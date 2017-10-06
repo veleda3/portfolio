@@ -15,13 +15,11 @@
                                   <%= markdown(@post.body) %>
                                 </p>
 
-                                <!-- <div class="social-share">
-                                    <a href="#"><i class="fa fa-facebook"></i>Like</a>
-                                    <a href="#"><i class="fa fa-twitter"></i>Tweet</a>
-                                    <a href="#"><i class="fa fa-google-plus"></i>Plus1</a>
-                                    <a href="#"><i class="fa fa-pinterest"></i>Pin it</a>
-                                    <a href="#"><i class="fa fa-dribbble"></i>Dribbble</a>
-                                </div> -->
+                                <div class="social-share">
+                                    <a href="http://www.facebook.com/share.php?u=www.velezda.com/posts/<%=@post.id%>"><i class="fa fa-facebook"></i>Like</a>
+                                    <a href="http://twitter.com/home?status=www.velezda.com/posts/<%=@post.id%>"><i class="fa fa-twitter"></i>Tweet</a>
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=www.velezda.com/posts/<%=@post.id%>&title=<%=@post.title%>&summary=<%=@post.description%>"><i class="fa fa-linkedin"></i>Linkedin</a>
+                                </div>
                             </div><!-- / single post content -->
                         </div>
                     </div>
