@@ -5,11 +5,15 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.most_recent
+     @meta_title = meta_title 'web and mobile development done right'
+     @meta_description = 'Comprehensive web development Guide for Ruby on Rails and react native Applications'
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @meta_title = meta_title @post.friendly_id
+    @meta_description = @post.description
   end
 
   # GET /posts/new

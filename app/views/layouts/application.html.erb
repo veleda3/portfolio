@@ -10,7 +10,10 @@
        ga('create', 'UA-107707437-1', 'auto');
      </script>
     <% end %>
-    <title>Velezda</title>
+    <title><%= @meta_title ? @meta_title : ApplicationController::BRAND_NAME %></title>
+    <% if @meta_description.present? %>
+     <meta name=”description” content=”<%= @meta_description %>”>
+     <% end %>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
