@@ -37,6 +37,10 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'tether-rails'
 gem 'devise'
+
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', github: 'sferik/rails_admin'
+gem 'rails_admin_rollincode', '~> 1.0'
 gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
