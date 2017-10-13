@@ -11,6 +11,7 @@ Rails.application.config.assets.precompile += %w( google_analytics.js )
 Rails.application.config.assets.precompile += %w( jquery.countTo.js )
 Rails.application.config.assets.precompile += %w( map.js )
 Rails.application.config.assets.precompile += %w( validator.min.js )
+Rails.application.config.assets.precompile += %w( tether.min.js )
 
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( animate.css )
