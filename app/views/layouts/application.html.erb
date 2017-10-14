@@ -21,12 +21,12 @@
        'https://connect.facebook.net/en_US/fbevents.js');
        fbq('init', '1444124858970656');
        fbq('track', 'PageView');
+       fbq('track', 'ViewContent');
      </script>
      <noscript><img height="1" width="1" style="display:none"
        src="https://www.facebook.com/tr?id=1444124858970656&ev=PageView&noscript=1"
      /></noscript>
      <!-- End Facebook Pixel Code -->
-
     <% end %>
     <title><%= @meta_title ? @meta_title : ApplicationController::BRAND_NAME %></title>
     <% if @meta_description.present? %>
