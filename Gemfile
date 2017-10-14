@@ -42,6 +42,7 @@ gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'rails_admin_rollincode', '~> 1.0'
 gem 'rails_12factor', group: :production
+gem 'rack-tracker'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

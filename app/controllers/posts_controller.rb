@@ -14,6 +14,9 @@ class PostsController < ApplicationController
   def show
     @meta_title = meta_title @post.title
     @meta_description = @post.description
+    tracker do |t|
+      t.facebook_pixel :track, { type: 'ViewContent', options: { p: 'my_way' } }
+    end
   end
 
   # GET /posts/new
