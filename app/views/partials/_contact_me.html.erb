@@ -1,0 +1,38 @@
+<div class="page-header">
+   <h2>Contact me</h2>
+</div>
+<div id="contact" class="full-width" data-section="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <%= form_tag (home_questions_path), 'data-toggle' => 'validator' do %>
+                <%= render partial: 'partials/flash_messages' %>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <%= text_field_tag :full_name, nil, placeholder: 'Full name', class: "form-control", id: "name" %>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                          <div class="form-group">
+                              <%= text_field_tag :email, nil, placeholder: 'Email', class: "form-control", id: "email" %>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                          <div class="form-group">
+                              <%= text_field_tag :subject, nil, placeholder: 'Subject..', class: "form-control", id: "subject" %>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                          <%= text_area_tag :message, nil, placeholder: 'message..', rows: 5, class: "form-control", id: "message" %>
+                          <div class="help-block with-errors"></div>
+                          </div>
+                          <%= submit_tag "Send massege", class: "btn btn-primary btn-md btn-form-submit" %>
+                          <div id="msgSubmit" class="h3 text-center hidden"></div>
+                          <div class="clearfix"></div>
+                      </div>
+                  </div>
+              <%end%>
+            </div>
+        </div>
+    </div><!-- / container -->
+</div>
