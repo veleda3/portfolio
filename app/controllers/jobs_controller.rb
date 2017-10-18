@@ -2,7 +2,7 @@ class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
 
   def index
-    @jobs = Job.all
+    @jobs = Job.most_recent
     @meta_title = meta_title 'All the web development work done'
     @meta_description = 'All web development and facebook marketing work that has been done by velezda.com'
   end
