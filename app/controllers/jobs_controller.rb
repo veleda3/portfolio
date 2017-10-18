@@ -1,11 +1,17 @@
 class JobsController < ApplicationController
+  before_action :set_job, only: [:show, :edit, :update, :destroy]
 
   def index
-    @jobs = Job.all
+    @jobs = Job.most_recent
+    @meta_title = meta_title 'All the web development work done'
+    @meta_description = 'All web development and facebook marketing work that has been done by velezda.com'
   end
 
   def show
-    @job = Job.find(params[:id])
+    @meta_title = meta_title @job.title
+    tracker do |t|
+      t.facebook_pixel :track, { type: 'PageView', options: { p: 'my_way' } }
+    end
   end
 
   def new
@@ -48,6 +54,10 @@ class JobsController < ApplicationController
   end
 
   private
+
+  def set_job
+    @job = Job.friendly.find(params[:id])
+  end
 
   def job_params
     params.require(:job).permit(:about, :client, :website, :finished_on, :picture)

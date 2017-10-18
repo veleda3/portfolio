@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
   def index
     @jobs = Job.all
+    tracker do |t|
+      t.facebook_pixel :track, { type: 'PageView' }
+    end
   end
 
   def about

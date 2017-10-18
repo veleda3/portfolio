@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.most_recent
      @meta_title = meta_title 'web and mobile development done right'
-     @meta_description = 'Comprehensive web development Guide for Ruby on Rails and react native Applications'
+     @meta_description = 'web development Guide for Ruby on Rails and react native Applications and facebook marketing'
   end
 
   # GET /posts/1
@@ -14,6 +14,9 @@ class PostsController < ApplicationController
   def show
     @meta_title = meta_title @post.title
     @meta_description = @post.description
+    tracker do |t|
+      t.facebook_pixel :track, { type: 'PageView', options: { p: 'my_way' } }
+    end
   end
 
   # GET /posts/new
