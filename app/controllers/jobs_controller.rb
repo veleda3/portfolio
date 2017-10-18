@@ -12,6 +12,7 @@ class JobsController < ApplicationController
     tracker do |t|
       t.facebook_pixel :track, { type: 'PageView', options: { p: 'my_way' } }
     end
+
   end
 
   def new
@@ -60,6 +61,6 @@ class JobsController < ApplicationController
   end
 
   def job_params
-    params.require(:job).permit(:about, :client, :website, :finished_on, :picture)
+    params.require(:job).permit(:about, :client, :website, :finished_on, :picture, :title)
   end
 end
