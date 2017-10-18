@@ -6,7 +6,7 @@ class Job < ApplicationRecord
   scope :most_recent, -> { order(id: :desc)}
 
   def should_generate_new_friendly_id?
-    title_changed?
+    title_changed? || slug.blank?
   end
 
   def published_date
