@@ -27,10 +27,10 @@
                             <div class="hovereffect">
 
                               <%=image_tag(job.picture, class: "img-responsive")%>
-                                <a href="jobs/<%=job.id%>">
+                                <a href="jobs/<%=job.friendly_id%>">
                                     <div class="overlay">
                                         <div class="hovereffect-title">
-                                            <h2>Project <%= job.id %></h2>
+                                            <h2>Project <%= job.friendly_id %></h2>
                                         </div>
                                     </div>
                                 </a>
