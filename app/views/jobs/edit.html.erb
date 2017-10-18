@@ -27,6 +27,12 @@
     <%= form.label :website %>
     <%= form.text_field :website, id: :job_website %>
   </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :job_title %>
+  </div>
+
   <div class="field">
     <%= form.label :about %>
     <%= form.text_area :about, id: :job_about %>
@@ -36,3 +42,8 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+var editor = new Editor();
+editor.render();
+</script>

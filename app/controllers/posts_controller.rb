@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.most_recent
      @meta_title = meta_title 'web and mobile development done right'
-     @meta_description = 'Comprehensive web development Guide for Ruby on Rails and react native Applications'
+     @meta_description = 'web development Guide for Ruby on Rails and react native Applications and facebook marketing'
   end
 
   # GET /posts/1
