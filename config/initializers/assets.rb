@@ -21,7 +21,7 @@ Rails.application.config.assets.precompile += %w( owl.carousel.css )
 Rails.application.config.assets.precompile += %w( owl.theme.css )
 Rails.application.config.assets.precompile += %w( style.css )
 Rails.application.config.assets.precompile += %w( font-awesome.min.css )
-
+Rails.application.config.assets.precompile += %w( landing.scss )
 
 
 # Add additional assets to the asset load path.
