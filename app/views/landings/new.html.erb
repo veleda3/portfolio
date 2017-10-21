@@ -116,6 +116,18 @@ style="">
 													<h2 class="conversion-title"><span class=
 													"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget"
 													data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_14139925276622572" style="">Get personalized tips that can improve your web development and advertising strategy, right from the start.&nbsp;</span></h2>
+
+													<% if @landing.errors.any? %>
+														<div id="error_explanation">
+															<h2><%= pluralize(@landing.errors.count, "error") %> prohibited this form from being saved:</h2>
+
+															<ul>
+															<% @landing.errors.full_messages.each do |message| %>
+																<li><%= message %></li>
+															<% end %>
+															</ul>
+														</div>
+													<% end %>
 												</div><!--end layout-widget-wrapper -->
 											</div><!--end widget-span -->
 										</div><!--end row-->
@@ -154,10 +166,7 @@ style="">
 											</div><!--end widget-span -->
 											<div class="form-container">
 
-
-
-
-                          <%= form_with(model: @landing local: true) do |form| %>
+                          <%= form_with(model: @landing, validate: true) do |form| %>
                             <% if @landing.errors.any? %>
                               <div id="error_explanation">
                                 <h2><%= pluralize(@landing.errors.count, "error") %> prohibited this form from being saved:</h2>

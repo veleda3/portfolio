@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'landing/new'
+  resources :landings, only: [:index, :new, :create]
 
-  get 'landing/index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :authors
